@@ -1,2 +1,6 @@
 *.iml
 workspace.xml
+uiDesigner.xml
+misc.xml
+profiles_settings.xml
+javaLearn.iml
