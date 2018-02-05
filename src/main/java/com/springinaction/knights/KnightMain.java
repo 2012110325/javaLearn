@@ -9,7 +9,7 @@ public class KnightMain {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("classpath:spring/knights.xml");
+                new ClassPathXmlApplicationContext("classpath:spring/applicationContext.xml");
         Knight knight = context.getBean(Knight.class);
         knight.embarkOnQuest();
         context.close();

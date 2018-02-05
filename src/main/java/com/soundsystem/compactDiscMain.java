@@ -25,7 +25,7 @@ public class compactDiscMain {
 
     public static void main(String[] args) {
         ApplicationContext ac =
-                new ClassPathXmlApplicationContext("classpath:spring/compactDisc.xml");
+                new ClassPathXmlApplicationContext("classpath:spring/applicationContext.xml");
 
         CompactDisc cd = ac.getBean(SgtPeppers.class);
         cd.play();
