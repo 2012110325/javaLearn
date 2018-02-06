@@ -13,6 +13,7 @@
 
     <import resource="compactDisc.xml"/>
     <import resource="knights.xml"/>
+    <import resource="performanceAop.xml"/>
 
 
     <!--取代context:property-placeholder，因为这种方式可以指定编码，从而可以使用中文的属性值-->

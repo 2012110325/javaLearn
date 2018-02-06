@@ -14,5 +14,6 @@ public class PerformanceMain {
         Performance p = ctx.getBean(Performance.class);
 
         p.perform();
+        ((Encoreable)p).performEncore();
     }
 }
