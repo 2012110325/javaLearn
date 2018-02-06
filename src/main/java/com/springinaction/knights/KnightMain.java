@@ -1,5 +1,6 @@
 package com.springinaction.knights;
 
+import com.soundsystem.AutowiredTest;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -10,8 +11,11 @@ public class KnightMain {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("classpath:spring/applicationContext.xml");
-        Knight knight = context.getBean(Knight.class);
-        knight.embarkOnQuest();
-        context.close();
+//        Knight knight = context.getBean(Knight.class);
+//        knight.embarkOnQuest();
+//        context.close();
+
+        AutowiredTest auto = context.getBean(AutowiredTest.class);
+        auto.play();
     }
 }
