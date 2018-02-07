@@ -23,11 +23,11 @@
         <!--当没有找到配置文件时 需要报错-->
         <property name="ignoreResourceNotFound" value="false" />
         <!--配置文件的位置-->
-        <property name="locations">
-            <list>
-                <value></value>
-            </list>
-        </property>
+        <!--<property name="locations">-->
+            <!--<list>-->
+                <!--<value></value>-->
+            <!--</list>-->
+        <!--</property>-->
         <!-- 可注入中文 -->
         <property name="fileEncoding" value="UTF-8"/>
     </bean>
