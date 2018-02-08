@@ -1,6 +1,7 @@
 package com.liqiang;
 
 import com.soundsystem.CDPlayer;
+import com.spittr.web.HomeController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -24,6 +25,7 @@ public class firstServlet extends HttpServlet {
         ApplicationContext ctx = WebApplicationContextUtils.getWebApplicationContext(getServletContext());
 
         ctx.getBean(CDPlayer.class).play();
+        System.out.println(ctx.getBean(HomeController.class).home());
     }
 
 }

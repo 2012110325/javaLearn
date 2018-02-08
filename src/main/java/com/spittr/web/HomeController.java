@@ -10,7 +10,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
  * Created by liqiang28 on 2018/2/6.
  */
 @Controller
-@RequestMapping({"/", "/homepage"})
+@RequestMapping({"/", "/first/homepage"})
 public class HomeController {
 
     @RequestMapping(method=GET)
