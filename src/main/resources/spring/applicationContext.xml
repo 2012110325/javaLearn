@@ -15,7 +15,6 @@
     <!--<import resource="knights.xml"/>-->
     <!--<import resource="performanceAop.xml"/>-->
 
-    <import resource="spring-datasource.xml"/>
     <!--取代context:property-placeholder，因为这种方式可以指定编码，从而可以使用中文的属性值-->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <!--可以从虚拟机的参数中获得配置信息-->
@@ -31,6 +30,8 @@
         <!-- 可注入中文 -->
         <property name="fileEncoding" value="UTF-8"/>
     </bean>
+
+    <import resource="spring-datasource.xml"/>
 
     <!--proxy-target-class 这个代理是基于类的还是基于接口的-->
     <!--启用aspectj 自动代理-->

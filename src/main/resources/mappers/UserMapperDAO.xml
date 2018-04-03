@@ -2,7 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.mybatis.dao.UserMapperDAO">  <!--对应DAO的目录-->
-    <select id="findByUserAndPass" resultType="com.mybatis.domain.User">
-        SELECT id, username, passwd from userDemo  where username =#{username} and password =#{password} limit 1;
+
+    <resultMap id="myMap" type="com.mybatis.domain.User">
+        <result property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="passwd"/>
+    </resultMap>
+    <select id="findByUserAndPass" resultMap="myMap">
+        SELECT id, username, passwd from userDemo  where username =#{username} and passwd =#{password} limit 1;
     </select>
 </mapper>
