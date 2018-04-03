@@ -11,11 +11,11 @@
 
 
 
-    <import resource="compactDisc.xml"/>
-    <import resource="knights.xml"/>
-    <import resource="performanceAop.xml"/>
+    <!--<import resource="compactDisc.xml"/>-->
+    <!--<import resource="knights.xml"/>-->
+    <!--<import resource="performanceAop.xml"/>-->
 
-
+    <import resource="spring-datasource.xml"/>
     <!--取代context:property-placeholder，因为这种方式可以指定编码，从而可以使用中文的属性值-->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <!--可以从虚拟机的参数中获得配置信息-->
@@ -23,11 +23,11 @@
         <!--当没有找到配置文件时 需要报错-->
         <property name="ignoreResourceNotFound" value="false" />
         <!--配置文件的位置-->
-        <!--<property name="locations">-->
-            <!--<list>-->
-                <!--<value></value>-->
-            <!--</list>-->
-        <!--</property>-->
+        <property name="locations">
+            <list>
+                <value>classpath:environments/db.properties</value>
+            </list>
+        </property>
         <!-- 可注入中文 -->
         <property name="fileEncoding" value="UTF-8"/>
     </bean>

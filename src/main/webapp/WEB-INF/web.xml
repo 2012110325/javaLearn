@@ -11,6 +11,12 @@
     <param-value>classpath:spring/applicationContext.xml</param-value>
   </context-param>
 
+
+  <!--<welcome-file-list>-->
+    <!--<welcome-file>index.jsp</welcome-file>-->
+  <!--</welcome-file-list>-->
+
+
   <listener>
     <!--监听器  用于加载spring的容器-->
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -21,22 +27,13 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:spring/springmvc-servlet.xml</param-value>
+      <param-value>classpath:spring/springmvc.xml</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>viewServlet</servlet-name>
     <url-pattern>/</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-    <servlet-name>firstServlet1</servlet-name>
-    <servlet-class>com.liqiang.firstServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>firstServlet1</servlet-name>
-    <url-pattern>/learn/abc</url-pattern>
   </servlet-mapping>
 
 </web-app>
