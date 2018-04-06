@@ -1,14 +1,10 @@
-package com.liqiang;
+package com.other;
 
 import com.soundsystem.CDPlayer;
 import com.spittr.web.HomeController;
 import org.apache.commons.math3.util.FastMath;
 import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
-import org.joda.time.LocalTime;
-import org.joda.time.Period;
 import org.springframework.context.ApplicationContext;
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;

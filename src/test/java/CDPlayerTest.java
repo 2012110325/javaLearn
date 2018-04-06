@@ -12,7 +12,7 @@ import javax.print.attribute.standard.Media;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * Created by liqiang on 2018/2/4 8:08.
+ * Created by other on 2018/2/4 8:08.
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)

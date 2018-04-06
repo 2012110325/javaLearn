@@ -3,7 +3,7 @@ package com.springinaction.knights;
 import java.io.PrintStream;
 
 /**
- * Created by liqiang on 2018/2/1 19:12.
+ * Created by other on 2018/2/1 19:12.
  */
 public class Minstrel {
 

@@ -19,7 +19,7 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * Created by liqiang on 2018/2/4 7:56.
+ * Created by other on 2018/2/4 7:56.
  */
 public class compactDiscMain {
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+
+
+    <!--<import resource="compactDisc.xml"/>-->
+    <!--<import resource="knights.xml"/>-->
+    <!--<import resource="performanceAop.xml"/>-->
+
+    <!--取代context:property-placeholder，因为这种方式可以指定编码，从而可以使用中文的属性值-->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <!--可以从虚拟机的参数中获得配置信息-->
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+        <!--当没有找到配置文件时 需要报错-->
+        <property name="ignoreResourceNotFound" value="false" />
+        <!--配置文件的位置-->
+        <property name="locations">
+            <list>
+                <value>classpath:environments/db.properties</value>
+            </list>
+        </property>
+        <!-- 可注入中文 -->
+        <property name="fileEncoding" value="UTF-8"/>
+    </bean>
+
+    <import resource="spring-datasource.xml"/>
+
+    <!--proxy-target-class 这个代理是基于类的还是基于接口的-->
+    <!--启用aspectj 自动代理-->
+    <aop:aspectj-autoproxy/>
+
+
+</beans>

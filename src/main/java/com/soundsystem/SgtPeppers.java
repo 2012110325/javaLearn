@@ -3,7 +3,7 @@ package com.soundsystem;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by liqiang on 2018/2/4 7:45.
+ * Created by other on 2018/2/4 7:45.
  */
 @Component
 public class SgtPeppers implements CompactDisc {
