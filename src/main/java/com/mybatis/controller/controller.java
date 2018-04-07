@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 
 @Controller
+@RequestMapping("/begin")
 public class controller {
 
     @Autowired
