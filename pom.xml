@@ -143,6 +143,24 @@
       <version>6.0.4</version>
     </dependency>
 
+    <!--sharding-jdbc-->
+    <dependency>
+      <groupId>com.dangdang</groupId>
+      <artifactId>sharding-jdbc-core</artifactId>
+      <version>1.4.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.dangdang</groupId>
+      <artifactId>sharding-jdbc-config-spring</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+
+  <!--kafka-->
+    <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka_2.10</artifactId>
+      <version>0.10.1.1</version>
+    </dependency>
 
   </dependencies>
   <build>
