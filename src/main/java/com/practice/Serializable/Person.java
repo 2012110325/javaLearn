@@ -12,7 +12,9 @@ public class Person implements Serializable {
 
     private static final long serialVersionUID = 8923589604022124114L;
 
+    public static int notStore = 100;
     private int age;
-    private String name;
+//    private String name;
     private String sex;
+    private int height;
 }
