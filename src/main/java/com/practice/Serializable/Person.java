@@ -9,12 +9,15 @@ import java.io.Serializable;
  */
 @Data
 public class Person implements Serializable {
+    private static final long serialVersionUID = 3458852397293282149L;
 
-    private static final long serialVersionUID = 8923589604022124114L;
+//    private static final long serialVersionUID = 8923589604022124114L;
 
     public static int notStore = 100;
-    private int age;
-//    private String name;
+    transient private int age;
+    private String name;
     private String sex;
     private int height;
+
+    private int abc;
 }
