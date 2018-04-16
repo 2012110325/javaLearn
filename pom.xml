@@ -169,6 +169,20 @@
       <version>2.9.0</version>
     </dependency>
 
+    <!--kafka-->
+    <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka-clients</artifactId>
+      <version>0.10.1.1</version>
+    </dependency>
+
+    <!--redisson-->
+    <dependency>
+      <groupId>org.redisson</groupId>
+      <artifactId>redisson</artifactId>
+      <version>1.2.1</version>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>javaLearn</finalName>
