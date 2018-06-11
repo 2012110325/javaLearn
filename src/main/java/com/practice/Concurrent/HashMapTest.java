@@ -13,13 +13,17 @@ public class HashMapTest {
 
         HashMap<Integer, Integer> h = new HashMap<Integer, Integer>();
 
-        Future f1 = s.submit(new MyRunnable(1, 1000000, h), null);
-        Future f2 = s.submit(new MyRunnable(1000000, 2000000, h), null);
-        Future f3 = s.submit(new MyRunnable(2000000, 3000000, h), null);
-        f1.get(); f2.get(); f3.get();
+        for (int i = 0;;) {
+            Future f1 = s.submit(new MyRunnable(1, 1000000, h), null);
+            Future f2 = s.submit(new MyRunnable(1000000, 2000000, h), null);
+            Future f3 = s.submit(new MyRunnable(2000000, 3000000, h), null);
+            f1.get();
+            f2.get();
+            f3.get();
+            h.clear();
+            System.out.println("第 " + (++i) + " s");
 
-
-        System.out.println("s");
+        }
     }
 
     static class MyRunnable implements Runnable {
