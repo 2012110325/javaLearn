@@ -69,6 +69,7 @@ public class controller {
 
 
     // 时间的最小值
+    // two
     public String print(int A, int B, int C, int D, int E, int F) {
 
         List<Integer> numbers = Arrays.asList(1, 3, 2, 5, 3, 5);
