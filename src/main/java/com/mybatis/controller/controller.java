@@ -68,8 +68,8 @@ public class controller {
     }
 
 
+    // 时间的最小值
     public String print(int A, int B, int C, int D, int E, int F) {
-
 
         List<Integer> numbers = Arrays.asList(1, 3, 2, 5, 3, 5);
         Collections.sort(numbers);
@@ -93,9 +93,6 @@ public class controller {
             minute = 10 * numbers.get(1) + numbers.get(4);
             second = 10 * numbers.get(2) + numbers.get(5);
         }
-
-
-
 
         if (hours < 24 && minute < 60 && second < 60) {
             return String.format("%02d:%02d:%02d", hours, minute, second);
